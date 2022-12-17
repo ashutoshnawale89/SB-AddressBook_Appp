@@ -1,5 +1,6 @@
 package com.bridgelabz.EmployeePayrollApp.controllers;
 
+import com.bridgelabz.EmployeePayrollApp.dto.EmployeePayrollDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,4 +14,25 @@ public class EmployeePayrollController {
         return new ResponseEntity<String>("Get Call Success", HttpStatus.OK);
     }
 
+    @GetMapping("/get/{empId}")
+    public ResponseEntity<String> getEmployeePayrollData(@PathVariable("empId") int empId) {
+        return new ResponseEntity<String>("Get Call Success for ID " + empId, HttpStatus.OK);
+    }
+
+    @PostMapping("/create")
+    public ResponseEntity<String> addEmployeePayrollData(@RequestBody EmployeePayrollDTO empPayrollDTO) {
+        return new ResponseEntity<String>("Updated Employee Payroll Data for : " + empPayrollDTO, HttpStatus.OK);
+    }
+
+    @PutMapping("/update")
+    public ResponseEntity<String> updateEmployeePayrollData(
+            @RequestBody EmployeePayrollDTO empPayrollDTO) {
+        return new ResponseEntity<String>("Updated Employee Payroll Data for : " + empPayrollDTO, HttpStatus.OK);
+    }
+
+    @DeleteMapping("/delete/{empId}")
+    public ResponseEntity<String> deleteEmployeePayrollData(@PathVariable("empId") int empId) {
+        return new ResponseEntity<String>("Delete Call Success for Id : "+empId, HttpStatus.OK);
+
+    }
 }
