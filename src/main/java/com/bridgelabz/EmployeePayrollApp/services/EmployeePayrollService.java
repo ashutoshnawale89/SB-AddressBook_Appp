@@ -10,24 +10,24 @@ import java.util.List;
 @Service
 public class EmployeePayrollService implements IEmployeePayrollService{
 
-    private List<EmployeePayrollData> employeeOayrollList = new ArrayList<>();
+    private List<EmployeePayrollData> employeePayrollList = new ArrayList<>();
 
 
     @Override
     public List<EmployeePayrollData> getEmployeePayrollData() {
-         return employeeOayrollList;
+         return employeePayrollList;
     }
 
     @Override
     public EmployeePayrollData getEmployeePayrollDataById(int empId) {
-        return employeeOayrollList.get(empId+1);
+        return employeePayrollList.get(empId+1);
     }
 
     @Override
     public EmployeePayrollData createEmployeePayrollData(EmployeePayrollDTO empPayrollDTO) {
         EmployeePayrollData empData=null;
-        empData=new EmployeePayrollData(employeeOayrollList.size()+1,empPayrollDTO);
-        employeeOayrollList.add(empData);
+        empData=new EmployeePayrollData(employeePayrollList.size()+1,empPayrollDTO);
+        employeePayrollList.add(empData);
         return empData;
     }
 
@@ -36,12 +36,12 @@ public class EmployeePayrollService implements IEmployeePayrollService{
         EmployeePayrollData empData=this.getEmployeePayrollDataById(empId);
         empData.setName(empPayrollDTO.name);
         empData.setSalary(empPayrollDTO.salary);
-        employeeOayrollList.set(empId-1,empData);
+        employeePayrollList.set(empId-1,empData);
         return empData;
     }
 
     @Override
     public void deleteEmployeePayrollData(int empId) {
-        employeeOayrollList.remove(empId-1);
+        employeePayrollList.remove(empId-1);
     }
 }
