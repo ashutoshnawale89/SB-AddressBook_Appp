@@ -1,6 +1,7 @@
 package com.bridgelabz.EmployeePayrollApp.services;
 
 import com.bridgelabz.EmployeePayrollApp.dto.EmployeePayrollDTO;
+import com.bridgelabz.EmployeePayrollApp.exceptions.EmployeePayrollException;
 import com.bridgelabz.EmployeePayrollApp.models.EmployeePayrollData;
 import com.bridgelabz.EmployeePayrollApp.repositary.EmployeeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Supplier;
 
 @Service
 public class EmployeePayrollService implements IEmployeePayrollService{
@@ -24,8 +26,12 @@ public class EmployeePayrollService implements IEmployeePayrollService{
     }
 
     @Override
-    public EmployeePayrollData getEmployeePayrollDataById(int empId){
-        EmployeePayrollData empData=employeeRepositary.findById(empId).get();
+    public EmployeePayrollData getEmployeePayrollDataById(int empId) throws Throwable {
+        EmployeePayrollData empData=employeeRepositary.findById(empId).orElseThrow(new Supplier<Throwable>() {
+            @Override
+            public Throwable get() {
+                return new EmployeePayrollException("Employee Not Found. Please Check The All Data Carefully");
+            }});
         return empData;
     }
 

@@ -9,7 +9,7 @@ import java.util.List;
 public interface IEmployeePayrollService {
 
     List<EmployeePayrollData> getEmployeePayrollData();
-    EmployeePayrollData getEmployeePayrollDataById(int empId);
+    EmployeePayrollData getEmployeePayrollDataById(int empId) throws Throwable;
 
     EmployeePayrollData createEmployeePayrollData(EmployeePayrollDTO empPayrollDTO);
 

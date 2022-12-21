@@ -934,3 +934,9 @@ java.lang.IndexOutOfBoundsException: Index 2 out of bounds for length 0
 2022-12-21 11:58:47.490  INFO 11036 --- [main] c.b.E.EmployeePayrollAppApplication      : Started EmployeePayrollAppApplication in 4.184 seconds (JVM running for 4.839)
 2022-12-21 11:58:47.493  INFO 11036 --- [main] c.b.E.EmployeePayrollAppApplication      : Employee Payroll App Started in DEV Environment
 2022-12-21 11:59:24.308  WARN 11036 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
+2022-12-21 17:02:58.050  INFO 10732 --- [main] c.b.E.EmployeePayrollAppApplication      : Starting EmployeePayrollAppApplication using Java 17.0.4.1 on ASHUTOSH-93ITJG43 with PID 10732 (C:\Users\ASHUTOSH NAWALE\Downloads\Employee-Payroll-App\Employee-Payroll-App\target\classes started by ASHUTOSH NAWALE in C:\Users\ASHUTOSH NAWALE\Downloads\Employee-Payroll-App\Employee-Payroll-App)
+2022-12-21 17:02:58.065 DEBUG 10732 --- [main] c.b.E.EmployeePayrollAppApplication      : Running with Spring Boot v2.7.6, Spring v5.3.24
+2022-12-21 17:02:58.067  INFO 10732 --- [main] c.b.E.EmployeePayrollAppApplication      : The following 1 profile is active: "dev"
+2022-12-21 17:03:27.614  WARN 10732 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-21 17:03:31.717  INFO 10732 --- [main] c.b.E.EmployeePayrollAppApplication      : Started EmployeePayrollAppApplication in 36.105 seconds (JVM running for 39.326)
+2022-12-21 17:03:31.725  INFO 10732 --- [main] c.b.E.EmployeePayrollAppApplication      : Employee Payroll App Started in DEV Environment

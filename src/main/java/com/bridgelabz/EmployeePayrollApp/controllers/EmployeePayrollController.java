@@ -27,7 +27,7 @@ public class EmployeePayrollController {
     }
 
     @GetMapping("/get/{empId}")
-    public ResponseEntity<ResponseDTO> getEmployeePayrollData(@PathVariable("empId") int empId) {
+    public ResponseEntity<ResponseDTO> getEmployeePayrollData(@PathVariable("empId") int empId) throws Throwable {
         EmployeePayrollData empDataList=null;
         empDataList = employeePayrollService.getEmployeePayrollDataById(empId);
         ResponseDTO respDTO=new ResponseDTO("Get Call Successfullly ",empDataList);
