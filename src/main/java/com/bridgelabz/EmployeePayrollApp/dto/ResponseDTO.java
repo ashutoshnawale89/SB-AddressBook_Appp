@@ -1,6 +1,8 @@
 package com.bridgelabz.EmployeePayrollApp.dto;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
 
 public @Data class ResponseDTO {  // Data Tranfer Object
     private String message;
