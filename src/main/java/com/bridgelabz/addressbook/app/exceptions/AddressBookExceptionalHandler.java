@@ -1,10 +1,9 @@
-package com.bridgelabz.EmployeePayrollApp.exceptions;
+package com.bridgelabz.addressbook.app.exceptions;
 
 
-import com.bridgelabz.EmployeePayrollApp.dto.ResponseDTO;
+import com.bridgelabz.addressbook.app.dto.ResponseDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.http.converter.HttpMessageConversionException;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -15,7 +14,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @ControllerAdvice
-public class EmployeePayrollExceptionalHandler {
+public class AddressBookExceptionalHandler {
 
     private static final String message="Exception While Processing REST Request";
     @ExceptionHandler(HttpMessageNotReadableException.class)
@@ -34,8 +33,8 @@ public class EmployeePayrollExceptionalHandler {
         return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.BAD_REQUEST);
     }
 
-    @ExceptionHandler(EmployeePayrollException.class)
-    public ResponseEntity<ResponseDTO> handleEmployeePayrollException(EmployeePayrollException exception) {
+    @ExceptionHandler(AddressBookException.class)
+    public ResponseEntity<ResponseDTO> handleAddressBookException(AddressBookException exception) {
         ResponseDTO responseDTO=new ResponseDTO("Exception while Processing REST Request ",exception.getMessage());
         return new ResponseEntity<ResponseDTO>(responseDTO,HttpStatus.BAD_REQUEST);
     }

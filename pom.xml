@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.bridgelabz</groupId>
-	<artifactId>Employee-Payroll-App</artifactId>
+	<artifactId>Address-Book-App</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Employee-Payroll-App</name>
 	<description> Project for Spring Boot Employee-Payroll-App</description>

@@ -1,4 +1,4 @@
-package com.bridgelabz.EmployeePayrollApp.dto;
+package com.bridgelabz.addressbook.app.dto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
